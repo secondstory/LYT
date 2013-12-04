@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2013 - Second Story
+Copyright (c) 2013 - Philippe Laulheret, Second Story [http://www.secondstory.com]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

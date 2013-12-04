@@ -1,4 +1,11 @@
+/*
 
+Copyright (c) 2013 -  Second Story [http://www.secondstory.com]
+
+This code is protected under MIT license. 
+For more information visit  : https://github.com/secondstory/LYT
+
+*/
  
 $(document).ready(function(){
   if (!"WebSocket" in window) {

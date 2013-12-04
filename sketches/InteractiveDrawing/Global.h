@@ -1,3 +1,12 @@
+/*
+
+Copyright (c) 2013 - Philippe Laulheret, Second Story [http://www.secondstory.com]
+
+This code is protected under MIT license. 
+For more information visit  : https://github.com/secondstory/LYT
+
+*/
+
 #pragma once
 #ifndef _GLOBAL_H_
 #define _GLOBAL_H_

@@ -1,3 +1,12 @@
+/*
+
+Copyright (c) 2013 -  Second Story [http://www.secondstory.com]
+
+This code is protected under MIT license. 
+For more information visit  : https://github.com/secondstory/LYT
+
+*/
+
 var Pixel = function(x, y, c, color, panel, localX,localY) {
 	this.x = x-1;
 	this.y = y-1;

@@ -1,3 +1,12 @@
+/*
+
+Copyright (c) 2013 - Philippe Laulheret, Second Story [http://www.secondstory.com]
+
+This code is licensed under MIT. 
+For more information visit  : https://github.com/secondstory/LYT
+
+*/
+
 #include <Dhcp.h>
 #include <Dns.h>
 #include <Ethernet.h>
