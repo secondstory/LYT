@@ -1,3 +1,12 @@
+/*
+
+Copyright (c) 2013 - Philippe Laulheret, Second Story [http://www.secondstory.com]
+
+This code is protected under MIT license. 
+For more information visit  : https://github.com/secondstory/LYT
+
+*/
+
 #include <Dhcp.h>
 #include <Dns.h>
 #include <WiFi.h>
@@ -99,47 +108,6 @@ void getRGBFromHSB(uint8_t &r, uint8_t  &g, uint8_t &b, float hue, float saturat
 }
 
 
-void hsvtorgb(unsigned char *r, unsigned char *g, unsigned char *b, unsigned char h, unsigned char s, unsigned char v)
-{
-  //from http://web.mit.edu/storborg/Public/hsvtorgb.c
-    unsigned char region, fpart, p, q, t;
-    
-    if(s == 0) {
-        /* color is grayscale */
-        *r = *g = *b = v;
-        return;
-    }
-    
-    /* make hue 0-5 */
-    region = h / 43;
-    /* find remainder part, make it from 0-255 */
-    fpart = (h - (region * 43)) * 6;
-    
-    /* calculate temp vars, doing integer multiplication */
-    p = (v * (255 - s)) >> 8;
-    q = (v * (255 - ((s * fpart) >> 8))) >> 8;
-    t = (v * (255 - ((s * (255 - fpart)) >> 8))) >> 8;
-        
-    /* assign temp vars based on color cone region */
-    switch(region) {
-        case 0:
-            *r = v; *g = t; *b = p; break;
-        case 1:
-            *r = q; *g = v; *b = p; break;
-        case 2:
-            *r = p; *g = v; *b = t; break;
-        case 3:
-            *r = p; *g = q; *b = v; break;
-        case 4:
-            *r = t; *g = p; *b = v; break;
-        default:
-            *r = v; *g = p; *b = q; break;
-    }
-    
-    return;
-}
-
-
 
 
 
@@ -171,7 +139,6 @@ void updatePixelBuffer()
     {
          
      decay_brightness(i);
-    //hsvtorgb(&r,&g,&b,(int) current_hue,default_sat, (int) bright[i]);
      getRGBFromHSB(r,g,b,current_hue,default_sat,  bright[i]);
     pixelBuffer[3*i] = r;
     pixelBuffer[3*i+1] = g;
@@ -189,7 +156,6 @@ void updateStrip()
 {
 
   
-  
   unsigned char* ptr = strip.pixels;
   unsigned char* pxBuf = pixelBuffer;
   
@@ -205,12 +171,7 @@ void updateStrip()
         if (even) ptr +=1;
       }
     }
-   // unsigned char r,g,b;
-    //if (bright[i] > default_brightness) bright[i] = std::max((float) bright[i] - decaySpeed*exp(,(float) default_brightness);
-    //decay_brightness(i);
-    //hsvtorgb(&r,&g,&b,(int) current_hue,default_sat, (int) bright[i]);
-    //setHsv(r,g,b,current_hue,default_sat,  bright[i]);
-    //strip.setPixelColor(i,r,g,b);
+
     if (even)
     {
       *ptr++ =*pxBuf++;
