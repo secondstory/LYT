@@ -1,6 +1,6 @@
 # LYT
 
-LYT is aa collaborative interactive ambient light fixture built using Intel's Galileo development board. It was developed for the Maker Faire Rome 2013 as a proof of concept on using the new Galileo board made by Intel.
+LYT is a collaborative interactive ambient light fixture built using Intel's Galileo development board. It was developed for the Maker Faire Rome 2013 as a proof of concept on using the new Galileo board made by Intel.
 
 This documents explains the architecture backing this project and how to compile it yourself. This is not an extensive step by step documentation but rather a collection of pointers to explain you how to do it yourself.
 
